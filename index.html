@@ -2,107 +2,290 @@
 <head>
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/css/default.css"/>
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/project.js"></script>
+    <script src="assets/js/task.js"></script>
 </head>
 <body>
 <div id="wrapper">
-    <div class="container header">
-        <div class="row">
-            <div class="span12">
-                <div class="logo uppercase">
-                    <h2>simple todo list</h2>
-                </div>
-                <div class="uppercase">
-                    <h3>from ruby garage</h3>
-                </div>
+<div class="container header">
+    <div class="row">
+        <div class="span12">
+            <div class="logo uppercase">
+                <h2>simple todo list</h2>
+            </div>
+            <div class="uppercase">
+                <h3>from ruby garage</h3>
             </div>
         </div>
     </div>
-    <div class="container content">
-        <div class="row todo">
-            <div class="span12 project_title">
-                <div class="row">
-                    <div class="span1 project_icon">
-                        <div class="icon-white icon-calendar icon-with-margin">&nbsp;</div>
-                    </div>
-                    <div class="span9 project_name">
-                        Some sample project
-                    </div>
-                    <div class="span2 actions">
-                        <div class="btn-toolbar">
-                            <div class="btn-group-primary">
-                                <a class="btn" href="#"><i class="icon-edit"></i></a>
-                                <a class="btn" href="#"><i class="icon-remove"></i></a>
-                            </div>
+</div>
+<div class="container content">
+    <div class="row todo">
+        <div class="span12 project_title">
+            <div class="row">
+                <div class="span1 project_icon">
+                    <div class="icon-white icon-calendar icon-with-margin">&nbsp;</div>
+                </div>
+                <div class="span9 project_name">
+                    Some sample project
+                </div>
+                <div class="span2 actions">
+                    <div class="btn-toolbar">
+                        <div class="btn-group-primary">
+                            <a class="btn" href="javascript:void(0)"><i class="icon-edit"></i></a>
+                            <a class="btn remove_project" href="javascript:void(0)"><i class="icon-remove"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="span12 add_task">
-                <div class="row">
-                    <div class="span1">
-                        <i class="icon-plus icon-with-margin"></i>
-                    </div>
-                    <div class="span11">
-                        <form>
-                            <div class="input-append">
-                                <input class="span9" placeholder="Start typing here to create a task" type="text">
-                                <button class="btn btn-success" type="button">Add new task</button>
-                            </div>
-                        </form>
-                    </div>
+        </div>
+        <div class="span12 add_task">
+            <div class="row">
+                <div class="span1">
+                    <i class="icon-plus icon-with-margin"></i>
+                </div>
+                <div class="span11">
+                    <form>
+                        <div class="input-append">
+                            <input class="span9" placeholder="Start typing here to create a task" type="text">
+                            <button class="btn btn-success" type="button">Add new task</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="span12 list_of_tasks">
-                <ul class="list">
-                    <li class="task">
-                        <div class="row">
-                            <div class="span1 done">
-                                <input type="checkbox"/>
-                            </div>
-                            <div class="span9 name">
-                                Some sample task
-                            </div>
-                            <div class="span2 actions">
-                                <div class="btn-toolbar">
-                                    <div class="btn-group-primary">
-                                        <a class="btn" href="#"><i class="icon-move"></i></a>
-                                        <a class="btn" href="#"><i class="icon-edit"></i></a>
-                                        <a class="btn" href="#"><i class="icon-remove"></i></a>
-                                    </div>
+        </div>
+        <div class="span12 list_of_tasks">
+            <ul class="list">
+                <li class="task">
+                    <div class="row">
+                        <div class="span1 done">
+                            <input type="checkbox"/>
+                        </div>
+                        <div class="span9 name">
+                            Some sample task
+                        </div>
+                        <div class="span2 actions">
+                            <div class="btn-toolbar">
+                                <div class="btn-group-primary">
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-move"></i></a>
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-edit"></i></a>
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-remove"></i></a>
                                 </div>
                             </div>
                         </div>
-                    </li>
-                    <li class="task">
-                        <div class="row">
-                            <div class="span1 done">
-                                <input type="checkbox"/>
-                            </div>
-                            <div class="span9 name">
-                                Some sample task
-                            </div>
-                            <div class="span2 actions">
-                                <div class="btn-toolbar">
-                                    <div class="btn-group-primary">
-                                        <a class="btn" href="#"><i class="icon-move"></i></a>
-                                        <a class="btn" href="#"><i class="icon-edit"></i></a>
-                                        <a class="btn" href="#"><i class="icon-remove"></i></a>
-                                    </div>
+                    </div>
+                </li>
+                <li class="task">
+                    <div class="row">
+                        <div class="span1 done">
+                            <input type="checkbox"/>
+                        </div>
+                        <div class="span9 name">
+                            Some sample task
+                        </div>
+                        <div class="span2 actions">
+                            <div class="btn-toolbar">
+                                <div class="btn-group-primary">
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-move"></i></a>
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-edit"></i></a>
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-remove"></i></a>
                                 </div>
                             </div>
                         </div>
-                    </li>
-                </ul>
-            </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="container footer">
-        <div class="row">
-            <div class="span2 offset5">
-                <button class="btn btn-primary"><i class="icon icon-plus"></i> Add TODO list</button>
+
+    <div class="row todo">
+        <div class="span12 project_title">
+            <div class="row">
+                <div class="span1 project_icon">
+                    <div class="icon-white icon-calendar icon-with-margin">&nbsp;</div>
+                </div>
+                <div class="span9 project_name">
+                    Some sample project
+                </div>
+                <div class="span2 actions">
+                    <div class="btn-toolbar">
+                        <div class="btn-group-primary">
+                            <a class="btn" href="javascript:void(0)"><i class="icon-edit"></i></a>
+                            <a class="btn  remove_project" href="javascript:void(0)"><i class="icon-remove"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="span12 add_task">
+            <div class="row">
+                <div class="span1">
+                    <i class="icon-plus icon-with-margin"></i>
+                </div>
+                <div class="span11">
+                    <form>
+                        <div class="input-append">
+                            <input name="name" class="span9" placeholder="Start typing here to create a task" type="text">
+                            <button class="btn btn-success" type="button">Add new task</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="span12 list_of_tasks">
+            <ul class="list">
+                <li class="task">
+                    <div class="row">
+                        <div class="span1 done">
+                            <input type="checkbox"/>
+                        </div>
+                        <div class="span9 name">
+                            Some sample task
+                        </div>
+                        <div class="span2 actions">
+                            <div class="btn-toolbar">
+                                <div class="btn-group-primary">
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-move"></i></a>
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-edit"></i></a>
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-remove"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="task">
+                    <div class="row">
+                        <div class="span1 done">
+                            <input type="checkbox"/>
+                        </div>
+                        <div class="span9 name">
+                            Some sample task
+                        </div>
+                        <div class="span2 actions">
+                            <div class="btn-toolbar">
+                                <div class="btn-group-primary">
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-move"></i></a>
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-edit"></i></a>
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-remove"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
+
+    <div class="row todo">
+        <div class="span12 project_title">
+            <div class="row">
+                <div class="span1 project_icon">
+                    <div class="icon-white icon-calendar icon-with-margin">&nbsp;</div>
+                </div>
+                <div class="span9 project_name">
+                    Some sample project
+                </div>
+                <div class="span2 actions">
+                    <div class="btn-toolbar">
+                        <div class="btn-group-primary">
+                            <a class="btn" href="javascript:void(0)"><i class="icon-edit"></i></a>
+                            <a class="btn  remove_project" href="javascript:void(0)"><i class="icon-remove"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span12 add_task">
+            <div class="row">
+                <div class="span1">
+                    <i class="icon-plus icon-with-margin"></i>
+                </div>
+                <div class="span11">
+                    <form>
+                        <div class="input-append">
+                            <input class="span9" placeholder="Start typing here to create a task" type="text">
+                            <button class="btn btn-success" type="button">Add new task</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="span12 list_of_tasks">
+            <ul class="list">
+                <li class="task">
+                    <div class="row">
+                        <div class="span1 done">
+                            <input type="checkbox"/>
+                        </div>
+                        <div class="span9 name">
+                            Some sample task
+                        </div>
+                        <div class="span2 actions">
+                            <div class="btn-toolbar">
+                                <div class="btn-group-primary">
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-move"></i></a>
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-edit"></i></a>
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-remove"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="task">
+                    <div class="row">
+                        <div class="span1 done">
+                            <input type="checkbox"/>
+                        </div>
+                        <div class="span9 name">
+                            Some sample task
+                        </div>
+                        <div class="span2 actions">
+                            <div class="btn-toolbar">
+                                <div class="btn-group-primary">
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-move"></i></a>
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-edit"></i></a>
+                                    <a class="btn" href="javascript:void(0)"><i class="icon-remove"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container footer">
+    <div class="row">
+        <div class="span2 offset5">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#newProject"><i class="icon icon-plus"></i>
+                Add TODO list
+            </button>
+        </div>
+    </div>
+</div>
+<div id="newProject" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="label"
+     aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 id="myModalLabel"></h3>
+    </div>
+    <div class="modal-body">
+        <form id="newProjectForm" class="form-inline" action="project/new" method="post">
+            <fieldset>
+                <input type="text" placeholder="Project name"
+                       name="name" required="required">
+
+                <button type="submit" class="btn btn-primary">Save</button>
+            </fieldset>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+</div>
 </div>
 <div id="template">
 
