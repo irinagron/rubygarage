@@ -6,8 +6,9 @@ $(document).ready(function () {
         event.preventDefault();
         /**
          * @todo ajax query to save a project in the db
+         * @todo add appending of id in html
          */
-        $('.content').append('<div class="row todo">      ' +
+        $('.content').append('<div class="row todo" id="project###">      ' +
             '      <div class="span12 project_title">        ' +
             '    <div class="row">' +
             '                <div class="span1 project_icon">' +
@@ -19,7 +20,7 @@ $(document).ready(function () {
             '                <div class="span2 actions">' +
             '                    <div class="btn-toolbar">' +
             '                        <div class="btn-group-primary">' +
-            '                            <a class="btn" href="javascript:void(0)"><i class="icon-edit"></i></a>' +
+            '                            <a class="btn edit_project" href="javascript:void(0)"><i class="icon-edit"></i></a>' +
             '                            <a class="btn remove_project" href="javascript:void(0)"><i class="icon-remove"></i></a>' +
             '                        </div>' +
             '                    </div>' +
@@ -46,5 +47,27 @@ $(document).ready(function () {
         $(this).parents('.todo').fadeOut(function(){
             $(this).remove();
         });
-    })
-})
+    });
+    $(document).on('click', '.edit_project', function(){
+        var name = $.trim($(this).parents('.todo').find('.project_name').text());
+        var id = $(this).parents('.todo').attr('id').split("_")[1];
+        $(this).parents('.todo').find('.project_name').html('<form class="form-inline">' +
+            '            <fieldset>' +
+            '            <input type="hidden" placeholder="Project name"' +
+            '            name="id" value="'+id+'" required="required">'     +
+        '            <input type="text" placeholder="Project name"' +
+            '            name="name" value="'+name+'" required="required">' +
+            '                            <button type="submit" class="btn btn-primary">Save</button>       ' +
+            '     </fieldset>' +
+            '            </form>');
+    });
+    $(document).on('submit', '.project_name form', function(event){
+        event.preventDefault();
+        /**
+         * @todo ajax call to update a project
+         */
+
+        var name = $(this).find("input[name=name]").val();
+        $(this).parents('.project_name').text(name);
+    });
+});
