@@ -18,7 +18,7 @@ $(document).ready(function(){
                 '        <div class="span2 actions">' +
                 '            <div class="btn-toolbar">' +
                 '                <div class="btn-group-primary">' +
-                '                    <a class="btn" href="javascript:void(0)"><i class="icon-move"></i></a>' +
+                '                    <a class="btn move_task" href="javascript:void(0)"><i class="icon-move"></i></a>' +
                 '                    <a class="btn edit_task" href="javascript:void(0)"><i class="icon-edit"></i></a>' +
                 '                    <a class="btn remove_task" href="javascript:void(0)"><i class="icon-remove"></i></a>' +
                 '                </div>' +
@@ -27,7 +27,7 @@ $(document).ready(function(){
                 '        </div>' +
                 '        </li>'
         )
-    })
+    });
     $(document).on('click', '.remove_task', function(){
         $(this).parents('.task').fadeOut(function(){
             $(this).remove();
@@ -55,4 +55,9 @@ $(document).ready(function(){
         var name = $(this).find("input[name=name]").val();
         $(this).parents('.name').text(name);
     });
-})
+    $(document).on('click', '.move_task', function(){
+        $("#sortable").sortable();
+        $("#sortable").disableSelection();
+        $(this).move();
+    });
+});
